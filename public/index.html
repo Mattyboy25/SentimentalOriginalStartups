@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>NoteGenius</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span><i class="fa-solid fa-brain"></i> Note Helper (Beta)</span>
+            
+        </div>
+         
+            <form id="questionForm">
+                <p style="font-size:15px !important; text-align:center;">*Try to include something the client did and how you responded to it*</p> 
+                <div class="input-container">
+                    <textarea id="questionInput" placeholder="Input Note (At least 1-2 sentences)" required></textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">
+                        <i class="fa-solid fa-plus"></i> Generate Note
+                    </button>
+                </div>
+            </form>
+            <div id="responseContainer" class="response-container"></div>
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">Generating...</div>
+            <button id="copyButton" class="btn" disabled>
+                <i class="fa-solid fa-copy"></i> Copy to Clipboard
+            </button>
+        </div>
+  
+    </div>
+  
+    <script src="ask.js"></script>
+</body>
+</html>
